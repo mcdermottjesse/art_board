@@ -1,0 +1,17 @@
+
+<h1>Art</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+  <% @arts.each do |art| %>
+    <tr>
+      <td><%= art.name %></td>
+      <td><%= art.description %></td>
+      <td><%= art.image %></td>
+      <td><%= link_to 'Show', art_path(art) %></td>
+    </tr>
+  <% end %>
+</table>

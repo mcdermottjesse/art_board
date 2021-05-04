@@ -7,11 +7,12 @@
 
 Rails.application.routes.draw do
   
-  get "art" => "art#index"
-  get"art/new" => "art#new"
-  post "art/new" => "art#create"
-  
-  
+  # get "art" => "art#index"
+  # get"art/new" => "art#new"
+  # post "art/new" => "art#create"
+
+  resources :art, only: [:index, :show, :new, :create]
+ 
   root 'welcome#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

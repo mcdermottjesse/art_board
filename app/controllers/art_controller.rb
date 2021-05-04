@@ -3,6 +3,10 @@ class ArtController < ApplicationController
     @arts = Art.order(id: :desc).all
   end
 
+  def show
+    @arts = Art.find params[:id]
+  end
+
   def new
     @art = Art.new
   end
@@ -11,13 +15,14 @@ class ArtController < ApplicationController
     @art = Art.new(art_params)
 
     @art.save
-    redirect_to "/art"
+    redirect_to "/art/:id"
   end
   
   private
 
   def art_params
     params.require(:art).permit(
+      :id,
       :name,
       :description,
       :image
