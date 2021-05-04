@@ -1,0 +1,22 @@
+<h1>Add new Art</h1>
+
+<%= form_for :art, url: art_new_path do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :url %><br>
+    <%= f.url_field :image %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
