@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # get"art/new" => "art#new"
   # post "art/new" => "art#create"
 
-  resources :art, only: [:index, :show, :new, :create]
+  resources :art
  
   root 'welcome#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

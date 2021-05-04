@@ -1,6 +1,7 @@
 class ArtController < ApplicationController
   def index
     @arts = Art.order(id: :desc).all
+
   end
 
   def show
@@ -15,7 +16,13 @@ class ArtController < ApplicationController
     @art = Art.new(art_params)
 
     @art.save
-    redirect_to "/art/:id"
+    redirect_to "/art"
+  end
+
+  def destroy
+    @art = Art.find params[:id]
+    @art.destroy
+    redirect_to "/art"
   end
   
   private

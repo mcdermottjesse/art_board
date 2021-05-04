@@ -4,14 +4,17 @@
 <table>
   <tr>
     <th>Title</th>
-    <th>Text</th>
+    <th>Description</th>
   </tr>
   <% @arts.each do |art| %>
     <tr>
       <td><%= art.name %></td>
       <td><%= art.description %></td>
-      <td><%= art.image %></td>
+      <td><%= image_tag art.image %></td>
       <td><%= link_to 'Show', art_path(art) %></td>
+      <td><%=link_to 'Destroy', art_path(art),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
