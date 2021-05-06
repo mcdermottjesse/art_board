@@ -1,26 +1,19 @@
-<section class="art-show">
+<section class="container">
 
   <header class="page-header">
    <%= @arts.name %>
   </header>
 
-  <article class="art-detail">
+  <article class="art">
 
-    <div class="row">
-
-      <div class="col-sm-4">
+      <div class="img">
         <%= image_tag(@arts.image) %>
       </div>
 
-      <div class="col-sm-8">
-        <dl class="dl-horizontal">
-          <dt>Name</dt>
-          <dd><%= @arts.name %></dd>
-          <dt>Description</dt>
-          <dd><%= @arts.description %></dd>
-        </dl>
+     <div class="desc">
+       <%= @arts.description %>
       </div>
-    </div>
+   
 
   </article>
 

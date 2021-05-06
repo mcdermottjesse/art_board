@@ -1,20 +1,28 @@
-
-<h1>Art</h1>
+<section class="container">
+<h1 class="page-header">Art</h1>
  
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-  </tr>
-  <% @arts.each do |art| %>
-    <tr>
-      <td><%= art.name %></td>
-      <td><%= art.description %></td>
-      <td><%= image_tag art.image %></td>
-      <td><%= link_to 'Show', art_path(art) %></td>
-      <td><%=link_to 'Destroy', art_path(art),
+<div>
+ <% @arts.each do |art| %>
+    
+      <div class="desc">
+      <%= art.name %>
+      </div>
+
+      <div class="img">
+      <%= image_tag art.image %>
+      </div>
+
+      <div class="desc">
+      <%= art.description %>
+      </div>
+
+      
+      <div class="desc">
+      <%= link_to 'View', art_path(art) %>
+      <%=link_to 'Delete', art_path(art),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+              data: { confirm: 'Are you sure?' } %>
+              </div>
+    </div>
   <% end %>
-</table>
+</section>
