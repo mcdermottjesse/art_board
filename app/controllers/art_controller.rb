@@ -1,7 +1,7 @@
 class ArtController < ApplicationController
   def index
-    @arts = Art.order(id: :desc).all
-
+    
+    @arts = Art.search(params[:search])
   end
 
   def show
@@ -32,7 +32,8 @@ class ArtController < ApplicationController
       :id,
       :name,
       :description,
-      :image
+      :image,
+      :search
     )
   end
 end
