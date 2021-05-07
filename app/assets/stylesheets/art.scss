@@ -54,7 +54,7 @@
     margin-left: 3em;
     margin-right: 3em;
     width:190px; 
-    
+    //often height would be used here too
   }
 
   .desc {
@@ -71,10 +71,28 @@
   }
 
   .delete {
-    display: flex;
-    justify-content: center;
+    //don't need to display flex etc here as this is wrapped in view div
     margin-left: 1em;
   
   }
+
+}
+
+nav {
+display: flex;
+padding: 8px;
+background-color: #06c4f3da;
+
+.navbar-home {
+  margin-right: 1em;
+}
+
+.navbar-view {
+  margin-right: 1em;
+}
+
+.navbar-new {
+  margin-right: 1em;
+}
 
 }
