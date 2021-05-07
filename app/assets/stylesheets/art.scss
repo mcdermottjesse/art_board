@@ -2,10 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.container {
+.container-show {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  // justify-content: space-around;
   justify-content: center;
   margin-top: 20px;
 
@@ -16,16 +16,65 @@
   .img {
     display: flex;
     justify-content: center;
-    border-style: solid;
-    border-radius: 10em;
-    padding:       15px;
-    height: auto;
+
     margin-top: 1.5em;
     margin-bottom: 1.5em;
+     
+    
   }
   .desc {
     display: flex;
     justify-content: center;
     margin-bottom: 2em;
   }
+}
+
+
+.page-header {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.container-index {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 20px;
+ 
+.title {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+  .img-index {
+    margin-top: 2em;
+    margin-left: 3em;
+    margin-right: 3em;
+    width:190px; 
+    
+  }
+
+  .desc {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+  }
+
+  .view {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+  }
+
+  .delete {
+    display: flex;
+    justify-content: center;
+    margin-left: 1em;
+  
+  }
+
 }

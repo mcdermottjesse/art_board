@@ -1,28 +1,35 @@
-<section class="container">
-<h1 class="page-header">Art</h1>
- 
 <div>
+<h1 class="page-header">Art</h1>
+ </div>
+
+ <h3 class="page-header"> <%= link_to 'Add New', '/art/new' %></h3>
+<section class="container-index">
+
+
  <% @arts.each do |art| %>
-    
-      <div class="desc">
+    <div>
+      <div class="title">
       <%= art.name %>
       </div>
 
-      <div class="img">
-      <%= image_tag art.image %>
+      <div class="img-index">
+      <%= image_tag art.image, style:"width:100%; height: auto"%>
       </div>
-
+      <br><br>
       <div class="desc">
       <%= art.description %>
       </div>
 
       
-      <div class="desc">
+      <div class="view">
       <%= link_to 'View', art_path(art) %>
+      <div class="delete">
       <%=link_to 'Delete', art_path(art),
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
               </div>
-    </div>
+              </div>
+              </div>
+   
   <% end %>
 </section>
