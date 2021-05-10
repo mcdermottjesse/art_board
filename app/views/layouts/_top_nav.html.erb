@@ -3,9 +3,8 @@
       <a class="navbar-home" href="/">Home</a>
       <a class="navbar-view" href="/art">View Art</a>
       <a class="navbar-new" href="/art/new">Create New</a>
-      <h4>Search by Name</h4>
       <%= form_tag(art_index_url, method: :get) do %>
-          <%= text_field_tag(:search, params[:search]) %>
+          <%= search_field_tag(:search, params[:search]) %>
           <%= submit_tag ("Search") %>
       <% end %>
 
