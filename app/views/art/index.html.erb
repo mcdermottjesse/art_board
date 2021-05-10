@@ -3,8 +3,13 @@
 <h1 class="page-header">Art</h1>
  </div>
 
-<section class="container-index">
+ <% if @arts.blank? %>
+ <div class="message">
+ <%= flash[:notice] = "No art found" %>
+ <% end %>
+ </div>
 
+<section class="container-index">
 
  <% @arts.each do |art| %>
     <div>
@@ -32,4 +37,6 @@
               </div>
    
   <% end %>
+
+
 </section>

@@ -4,8 +4,8 @@
       <a class="navbar-view" href="/art">View Art</a>
       <a class="navbar-new" href="/art/new">Create New</a>
       <%= form_tag(art_index_url, method: :get) do %>
-          <%= search_field_tag(:search, params[:search]) %>
+          <%= search_field_tag(:search, params[:search], required: true) %>
           <%= submit_tag ("Search") %>
       <% end %>
-
+   
 </nav>

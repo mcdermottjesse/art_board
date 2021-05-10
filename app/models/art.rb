@@ -7,12 +7,7 @@ class Art < ApplicationRecord
 
   def self.search(search)
     if search
-      art = Art.find_by("name LIKE ?", "%#{search}%")
-      if art
-        where(id: art)
-      else
-        Art.all
-      end
+      where('name LIKE ?', "%#{search}%")
       else
         Art.all
       end

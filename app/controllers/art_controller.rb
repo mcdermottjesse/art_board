@@ -1,9 +1,7 @@
 class ArtController < ApplicationController
   def index
-    
     @arts = Art.search(params[:search])
-  end
-
+end
   def show
     @arts = Art.find params[:id]
   end
@@ -24,7 +22,7 @@ class ArtController < ApplicationController
     @art.destroy
     redirect_to "/art"
   end
-  
+
   private
 
   def art_params
