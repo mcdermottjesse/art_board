@@ -5,13 +5,14 @@
 
  <% if @arts.blank? %>
  <div class="message">
- <%= flash[:notice] = "No art found" %>
+ <p>No art found</p>
  <% end %>
  </div>
 
 <section class="container-index">
 
  <% @arts.each do |art| %>
+  
     <div>
       <div class="title">
       <%= art.name %>
