@@ -1,6 +1,7 @@
 class ArtController < ApplicationController
   def index
     @arts = Art.search(params[:search])
+    @arts = current_user.arts
 end
   def show
     @arts = Art.find params[:id]
@@ -12,7 +13,7 @@ end
 
   def create
     @art = Art.new(art_params)
-
+    @art.user = current_user
     @art.save
     redirect_to "/art"
   end
@@ -31,7 +32,8 @@ end
       :name,
       :description,
       :image,
+      :user_id,
       :search
-    )
+    ).merge(user: current_user)
   end
 end
