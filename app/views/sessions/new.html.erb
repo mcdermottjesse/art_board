@@ -7,3 +7,7 @@
    <%= password_field_tag :password%>
    <%= submit_tag "Login"%>
 <%end%>
+
+<% if flash[:danger] %>
+<div class="login_msg"><%= flash[:danger] %></div>
+<% end %>
