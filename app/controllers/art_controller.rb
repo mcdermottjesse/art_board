@@ -1,7 +1,9 @@
 class ArtController < ApplicationController
+  
   def index
-    @arts = Art.search(params[:search])
+    
     @arts = current_user.arts
+   
 end
   def show
     @arts = Art.find params[:id]
