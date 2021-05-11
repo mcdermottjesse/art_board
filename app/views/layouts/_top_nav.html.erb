@@ -1,15 +1,19 @@
 <nav>
 
-      <a class="navbar-home" href="/">Home</a>
-      <a class="navbar-view" href="/art">View Art</a>
-      <a class="navbar-new" href="/art/new">Create New</a>
+      <a class="navbar" href="/">Home</a>
+      <a class="navbar" href="/art">View Art</a>
+      <a class="navbar" href="/art/new">Create New</a>
       <%= form_tag(art_index_url, method: :get) do %>
           <%= search_field_tag(:search, params[:search], required: true) %>
           <%= submit_tag ("Search") %>
       <% end %>
 
-      <% if logged_in? %>
-    You are Logged In as <%= current_user.username %>
+<a class="navbar-login" href="/login">Login</a>
+<a class="navbar-user" href="/login">Logout</a>
+<a class="navbar-user" href="/signup">Signup</a>
+
+<% if logged_in? %>
+You are Logged In as <%= current_user.username %>
 <%end%>
    
 </nav>
