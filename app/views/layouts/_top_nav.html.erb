@@ -9,10 +9,10 @@
       <% end %>
 
 <a class="navbar-login" href="/login">Login</a>
-<a class="navbar-user" href="/login">Logout</a>
+<a class="navbar-user" href="/logout">Logout</a>
 <a class="navbar-user" href="/signup">Signup</a>
 
-<% if logged_in? %>
+<% if current_user %>
 You are Logged In as <%= current_user.username %>
 <%end%>
    
