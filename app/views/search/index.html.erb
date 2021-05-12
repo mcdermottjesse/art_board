@@ -7,15 +7,15 @@
  <p>No art found</p>
  <% end %>
  </div>
-
+#Review error message above as it will not display if name of art owned by someone else.
 
 <section class="container-index">
 
  <% @arts.each do |art| %>
-  
-  
+  <% if art.user_id === current_user.id %>
     <div>
       <div class="title">
+      <%= art.user_id %>
       <%= art.name %>
       </div>
 
@@ -27,7 +27,6 @@
       <%= art.description %>
       </div>
 
-      
       <div class="view">
       <%= link_to 'View', art_path(art) %>
       <div class="delete">
@@ -38,8 +37,8 @@
               </div>
               </div>
    
-  
 
+<% end %>
 <% end %>
 
 
