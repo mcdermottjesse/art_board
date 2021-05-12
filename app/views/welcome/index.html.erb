@@ -1,7 +1,36 @@
-<h1>Welcome</h1>
+<h1>Community Art Board</h1>
 
-<p><%= link_to 'Art Board', '/art' %><p>
 
-<%= button_to "Login", '/login', method: :get%>
+<section class="container-index">
 
-<%= button_to "Sign Up", '/signup', method: :get%>
+ <% @arts.each do |art| %>
+  
+    <div>
+      <div class="title">
+      <%= art.name %>
+      </div>
+
+      <div class="img-index">
+      <%= image_tag art.image, style:"width:100%; height: auto"%>
+      </div>
+      <br><br>
+      <div class="desc">
+      <%= art.description %>
+      </div>
+
+      <div class="view">
+      <%= link_to 'View', art_path(art) %>
+      <div class="delete">
+      <%=link_to 'Delete', art_path(art),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+              </div>
+              </div>
+              </div>
+   
+
+
+<% end %>
+
+
+</section>

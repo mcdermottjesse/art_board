@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     user = User.find_by(username: params[:username])
     if user && user.authenticate(params[:password])
        session[:user_id] = user.id
-       redirect_to '/'
+       redirect_to '/art'
     else
       flash[:danger] = "There is a problem with your username or password"
        redirect_to '/login'
