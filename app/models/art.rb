@@ -9,7 +9,8 @@ class Art < ApplicationRecord
 
   def self.search(search)
     if search
-      where('name LIKE ?', "%#{search}%")
+      
+      where('name LIKE ?', "%#{search}%") #i think i need to edit this so search only brings up art that is theirs
       else
         Art.all
       end
