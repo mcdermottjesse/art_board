@@ -2,7 +2,7 @@
 
 An application built with Ruby 3.0.0 and Rails 6.1. Users can upload their own art and view other art submitted by the community.
 
-##Setup
+## Setup
 
 1. Run `bundle install` to install dependencies
 
@@ -10,7 +10,7 @@ An application built with Ruby 3.0.0 and Rails 6.1. Users can upload their own a
 
 3. Run `bin/rails server` to start the server.
 
-*## Dependencies
+## Dependencies
 
 * Rails 6.1 [Rails Guide](https://guides.rubyonrails.org/)
 * SQLite3
