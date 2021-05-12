@@ -1,23 +1,16 @@
 # Art Board
 
-An application built with Rails 6.1. Users can upload their own art and view other art submitted by the community.
+An application built with Ruby 3.0.0 and Rails 6.1. Users can upload their own art and view other art submitted by the community.
 
-Things you may want to cover:
+##Setup
 
-* Ruby version 3.0.0
+1. Run `bundle install` to install dependencies
 
-* System dependencies
+2. Run `bin/rake db:reset` to create, load and seed db
 
-* Configuration
+3. Run `bin/rails server` to start the server.
 
-* Database creation
+*## Dependencies
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Rails 6.1 [Rails Guide](https://guides.rubyonrails.org/)
+* SQLite3
