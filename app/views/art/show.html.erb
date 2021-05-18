@@ -1,3 +1,4 @@
+
 <section class="container-show">
 
   <header class="page-header">
@@ -13,8 +14,14 @@
      <div class="desc">
        <%= @arts.description %>
       </div>
-   
-
+<% if @arts.user_id === @art%>
+      <div class="delete">
+      <%=link_to 'Delete', art_path(@arts),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+              </div>
+              <% end %>
+            
   </article>
  
 </section>

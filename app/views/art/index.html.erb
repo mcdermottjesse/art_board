@@ -9,8 +9,6 @@
  <% end %>
  </div>
 
-
-
 <section class="container-index">
 
  <% @arts.each do |art| %>
@@ -29,19 +27,10 @@
       <%= art.description %>
       </div>
 
-      
       <div class="view">
       <%= link_to 'View', art_path(art) %>
-      <div class="delete">
-      <%=link_to 'Delete', art_path(art),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>
               </div>
               </div>
-              </div>
-   
-  
-
 <% end %>
 
 
