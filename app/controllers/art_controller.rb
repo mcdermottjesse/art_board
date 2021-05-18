@@ -5,7 +5,7 @@ class ArtController < ApplicationController
 end
 
   def show
-     @arts = Art.find params[:id]
+    @arts = Art.find params[:id]
     @art = current_user.id
   end
 

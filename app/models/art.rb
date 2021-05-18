@@ -10,7 +10,8 @@ class Art < ApplicationRecord
   def self.search(search)
     if search
       
-      where('name LIKE ?', "%#{search}%")
+      where('name LIKE ?', "%#{search}%") #add abiltiy to search by description too
+      
       else
         Art.all
       end

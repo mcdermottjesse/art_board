@@ -20,12 +20,19 @@
     margin-top: 1.5em;
     margin-bottom: 1.5em;
      
-    
   }
   .desc {
     display: flex;
     justify-content: center;
     margin-bottom: 2em;
+  }
+
+  .delete {
+   
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+  
   }
 }
 
@@ -70,11 +77,6 @@
     margin-top: 1em;
   }
 
-  .delete {
-    //don't need to display flex etc here as this is wrapped in view div
-    margin-left: 1em;
-  
-  }
 
 }
 

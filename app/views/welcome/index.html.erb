@@ -1,3 +1,21 @@
+<nav>
+      <a class="navbar" href="/">Home</a>
+      <a class="navbar" href="/art">My Art</a>
+      <a class="navbar" href="/art/new">Create New</a>
+      <%= form_tag("/", method: :get) do %>
+          <%= search_field_tag(:search, params[:search], required: true) %>
+          <%= submit_tag ("Search") %>
+      <% end %>
+<% if !current_user %>
+<a class="navbar-login" href="/login">Login</a>
+<a class="navbar-user" href="/signup">Signup</a>
+<% else %>
+<div class="navbar-logout">You are Logged In as <%= current_user.username %></div>
+<a href="/logout">Logout</a>
+<% end %>
+
+</nav>
+
 <h1>Community Art Board</h1>
 
 
@@ -9,7 +27,7 @@
       <div class="title">
       <%= art.name %>
       </div>
-
+      
       <div class="img-index">
       <%= image_tag art.image, style:"width:100%; height: auto"%>
       </div>
