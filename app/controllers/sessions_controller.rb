@@ -1,8 +1,8 @@
 class SessionsController < ApplicationController
   skip_before_action :authorized, only: [:new, :create]
   def create
-    user = User.find_by(username: params[:username])
-    if user && user.authenticate(params[:password])
+    user = User.authenticate_with_credentials(params[:username], params[:password])
+    if user
        session[:user_id] = user.id
        redirect_to '/art'
     else
