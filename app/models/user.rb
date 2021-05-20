@@ -1,5 +1,5 @@
 
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   has_many :arts
   has_secure_password
 
@@ -8,12 +8,8 @@ class User < ActiveRecord::Base
   validates :password, presence: true
   validates :password, length: { minimum: 5 }
 
-
-
 def self.authenticate_with_credentials(username, password)
-
   user = User.find_by_username(username)
-
   if user && user.authenticate(password)
     user
   else
