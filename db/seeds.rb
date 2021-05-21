@@ -16,8 +16,7 @@ Art.destroy_all
 user1.arts.create!({
   name: "Drinking Coffee",
   image: "https://www.theartstory.org/images20/works/van_gogh_vincent_1.jpg?2",
-  description: "Van Gogh",
-  user_id: 1
+  description: "Van Gogh"
 })
 
 
