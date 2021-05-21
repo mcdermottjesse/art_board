@@ -43,7 +43,33 @@ context "art needs an image url" do
   end
 end
 
+context "art needs a description" do
+  it "is given a description" do
+    @art.description = nil
+    @art.validate
+    expect(@art.errors[:description]).to include("can't be blank")
 
+    @art.description = "string"
+    @art.validate
+    expect(@art.errors[:description]).to_not include("can't be blank")
 
+  end
+end
+
+context "art name can be no more than 10 characters" do
+  it "is given a name less than 10 characters" do
+    @art.name = "more than ten"
+    @art.validate
+    expect(@art.errors[:name]).to include("is too long (maximum is 10 characters)")
+  end
+end
+
+context "art description can be no more than 25 characters" do
+  it "is given a description less than 25 characters" do
+    @art.description = "string is more than 25 char"
+    @art.validate
+    expect(@art.errors[:description]).to include("is too long (maximum is 25 characters)")
+  end
+end
 end
 end
