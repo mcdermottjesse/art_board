@@ -16,7 +16,7 @@ RSpec.feature "Visitor/User views art", type: :feature, js: true do
   include_context 'When authenticated'
   scenario "User can view art" do
    
-    visit "/"
+    
     click_on("View")
     expect(page).to have_content('Face')
     expect(page).to have_content('Salvador Dali')
