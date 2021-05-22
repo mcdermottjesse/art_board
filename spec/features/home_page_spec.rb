@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "User/Visitor navigates to Art home page", type: :feature, js: true do
+RSpec.feature "User/Visitor navigates to Art home page", type: :feature, js: true do
 
 before :each do
   @user = User.create! username:"Test User", password: "Password"
