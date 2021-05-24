@@ -1,5 +1,6 @@
 <h1>Add new Art</h1>
 
+
 <%= form_for :art, url: art_index_path do |f| %>
   <p>
     <%= f.label :title %><br>
@@ -19,4 +20,10 @@
   <p>
     <%= f.submit %>
   </p>
+
 <% end %>
+
+<% if flash[:danger] %>
+<div class="create_err"><%= flash[:danger] %></div>
+<% end %>
+

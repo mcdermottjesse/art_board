@@ -12,13 +12,20 @@ end
 
   def new
     @art = Art.new
-  end
+end
 
   def create
     @art = Art.new(art_params)
-    @art.user = current_user
-    @art.save
-    redirect_to "/art"
+    if @art.valid?
+        @art.user = current_user
+        @art.save
+        redirect_to "/art"
+else
+  flash[:danger] = "All fields need to be filled.
+                    Title length can be no more that 10 characters. 
+                    Description length can be no more than 25 characters"
+      redirect_to "/art/new"
+end
   end
 
   def destroy
