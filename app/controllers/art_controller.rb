@@ -2,6 +2,7 @@ class ArtController < ApplicationController
   
   def index
     @arts = current_user.arts
+    @art = current_user.id
 end
 
   def show

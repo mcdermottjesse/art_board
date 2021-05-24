@@ -8,7 +8,7 @@
  <% end %>
  </div>
  
-<%# Review error message above as it will not display if name of art owned by someone else. %>
+
 
 <section class="container-index">
 
@@ -31,9 +31,13 @@
       <%= link_to 'View', art_path(art) %>
               </div>
               </div>
+
+<% else %>
+  <div class="messagetwo">
+  <p>No art found</p>
+  </div>
    
 <% end %>
+
 <% end %>
-
-
 </section>
