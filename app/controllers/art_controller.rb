@@ -29,11 +29,13 @@ end
   end
 
   def destroy
-    
-    @art = Art.find params[:id]
-    @art.destroy
-    redirect_to "/art"
 
+    @art = Art.find params[:id]
+    if @art.destroy
+    flash[:notice] = "Deleted" 
+    redirect_to "/art"
+    
+    end
   end
 
   private

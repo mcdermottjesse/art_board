@@ -2,7 +2,9 @@
 <div>
 <h1 class="page-header">Art</h1>
  </div>
-
+ <% if flash[:notice] %>
+ <div class="delete_msg"><%= flash[:notice] %></div>
+ <% end %>
  <% if @arts.blank? %>
  <div class="message">
  <p>No art added yet</p>
