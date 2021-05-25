@@ -5,18 +5,25 @@
 .login_msg {
 
   display: flex;
+  justify-content: center;
   padding: 6px;
+  margin: 6px;
   border-radius: 3px;
   border: 1px solid rgb(238,211,215);
   background-color: rgb(240, 204, 204);
   color: rgb(185,74,72);
-  margin-top: 2em;
-  margin-right: 65em;
-  margin-left: 7.5em;
+  margin-left: 40em;
+  margin-right: 40em;
+ 
 
 }
 
 .user_login {
+  margin-top: 5em;
   display: flex;
   justify-content: center;
+}
+
+.login_title {
+  margin-top: 1em;
 }

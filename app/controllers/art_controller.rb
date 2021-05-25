@@ -29,10 +29,11 @@ end
   end
 
   def destroy
+    
     @art = Art.find params[:id]
-    if @art.destroy
-      flash[:notice] = "Are you sure?"
-    end
+    @art.destroy
+    redirect_to "/art"
+
   end
 
   private
