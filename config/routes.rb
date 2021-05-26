@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   
   get '/search' => 'search#index'
   
-  resources :art, as: :art
+  resources :art
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   match '*unmatched', to: 'application#route_not_found', via: :all
