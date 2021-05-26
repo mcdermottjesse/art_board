@@ -14,7 +14,7 @@ end
 
 scenario "They can see art that has been uploaded by users on the home page" do
  
-  visit "/"
+  visit homepage_path
 
   expect(page).to have_content('In Thought')
   expect(page).to have_content('Picasso Painting')

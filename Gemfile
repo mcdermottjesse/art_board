@@ -49,9 +49,10 @@ group :test do
   gem 'capybara', '~> 3.5'
   gem 'poltergeist'
   gem 'database_cleaner'
-  
+  gem 'rails-controller-testing'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'devise'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
