@@ -56,11 +56,11 @@ context "art needs a description" do
   end
 end
 
-context "art name can be no more than 10 characters" do
-  it "is given a name less than 10 characters" do
-    @art.name = "more than ten"
+context "art name can be no more than 20 characters" do
+  it "is given a name less than 20 characters" do
+    @art.name = "more than twenty chars"
     @art.validate
-    expect(@art.errors[:name]).to include("is too long (maximum is 10 characters)")
+    expect(@art.errors[:name]).to include("is too long (maximum is 20 characters)")
   end
 end
 

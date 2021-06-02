@@ -2,7 +2,7 @@ class Art < ApplicationRecord
   
   belongs_to :user
   
-  validates :name, presence: true, length: {maximum: 10}
+  validates :name, presence: true, length: {maximum: 20}
   validates :image, presence: true
   validates :description, presence: true, length: {maximum: 25}
   validates :user_id, presence: true
@@ -10,7 +10,7 @@ class Art < ApplicationRecord
   def self.search(search)
     if search
       
-      where('name LIKE ?', "%#{search}%") #add abiltiy to search by description too
+      where('LOWER(name) LIKE :search OR LOWER(description) LIKE :search', search: "%#{search.downcase}%") #add abiltiy to search by description too
       
       else
         Art.all

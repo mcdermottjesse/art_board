@@ -1,7 +1,8 @@
-<h1>Add new Art</h1>
+<h1 class="art_title">Add new Art</h1>
 
 
-<%= form_for :art, url: art_index_path do |f| %>
+<%= form_for @art, url: art_index_path do |f| %>
+  <div class="signup_title">
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :name %>
@@ -20,7 +21,7 @@
   <p>
     <%= f.submit %>
   </p>
-
+</div>
 <% end %>
 
 <% if flash[:danger] %>

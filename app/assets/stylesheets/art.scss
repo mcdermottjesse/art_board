@@ -1,6 +1,10 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+h1 {
+  display: flex;
+  justify-content: center;
+}
 
 .container-show {
   display: flex;
@@ -103,7 +107,7 @@ background-color: #06c4f3da;
 
 .navbar-logout {
   margin-top: 0.5em;
-  margin-left: 44em;
+  margin-left: 40em;
   margin-right: 1em;
 }
 
@@ -173,4 +177,14 @@ background-color: #06c4f3da;
   margin-right: 42em;
   margin-left: 42em;
   
+}
+
+.new_art {
+  margin-top: 5em;
+  display: flex;
+  justify-content: center;
+}
+
+.art_title {
+  margin-top: 0.5em;
 }
